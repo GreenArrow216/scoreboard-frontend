@@ -20,9 +20,9 @@ const Modal = (props: {
           </div>
         </div>
         <div className="modal-body">{props.children}</div>
-        <div className="modal-footer">
+        {/* <div className="modal-footer">
           <button>Save</button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
