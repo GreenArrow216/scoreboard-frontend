@@ -4,19 +4,18 @@ import SettingsIcon from "../assets/settings.svg";
 import useGetData from "../hooks/useGetData";
 import { useState } from "react";
 
-type ScoreType = {
+type PlayerTypes = {
   id: number;
   name: string;
-  score: number;
 };
 
 const Settings = () => {
   const { data, loading } = useGetData("http://localhost:3000/players");
   const [isModalOpen,setModalOpen] = useState<boolean>(false)
 
-  const scoreData: ScoreType[] = data ? data : [];
+  const playerData: PlayerTypes[] = data ? data : [];
 
-  console.log({ scoreData, loading });
+  console.log({ scoreData: playerData, loading });
   return (
     <>
       <div className="settings-btn" onClick={() => setModalOpen(true)}>
@@ -25,42 +24,37 @@ const Settings = () => {
       <Modal title={"Change Settings"} isOpen={isModalOpen} setModalOpen={setModalOpen}>
         <form>
           <div>
-            <div>
-              <p className="label">Player</p>
+            <div className="form-control">
+              <p className="label">Player 1</p>
               <select>
-                {scoreData?.map((scoreDetails, i) => (
-                  <option key={i}>{scoreDetails.name}</option>
+                {playerData?.map((player, i) => (
+                  <option key={i} value={player.id}>{player.name}</option>
                 ))}
-                <option></option>
               </select>
             </div>
-            <div>
+            <div className="form-control">
               <p className="label">Nick name</p>
               <input required={true} defaultValue={"Team 1"} />
             </div>
           </div>
           <div>
+            <div className="form-control">
+              <p className="label">Player 2</p>
             <select>
-              {scoreData?.map((scoreDetails, i) => (
-                <option key={i}>{scoreDetails.name}</option>
+              {playerData?.map((player, i) => (
+                <option key={i} value={player.id}>{player.name}</option>
               ))}
-              <option></option>
             </select>
-            <div>
+            </div>
+            <div className="form-control">
               <p className="label">Nick name</p>
               <input required={true} defaultValue={"Team 2"} />
             </div>
           </div>
-          <div>
+          <div className="form-control">
             <p className="label">Max score to win</p>
             <input required={true} type="number"/>
           </div>
-          {/* <div>
-            <input />
-          </div>
-          <div>
-            <input />
-          </div> */}
         </form>
       </Modal>
     </>

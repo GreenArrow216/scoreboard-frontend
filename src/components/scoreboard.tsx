@@ -2,6 +2,7 @@ import { TouchEvent, useState } from "react";
 import "../App.css";
 
 import ResetIcon from "../assets/reset.svg";
+import CloudSave from "../assets/cloud-upload.svg"
 import Settings from "./settings";
 
 const Scoreboard = () => {
@@ -45,19 +46,19 @@ const Scoreboard = () => {
     <div className="container center">
       <Settings/>
       <div
-        className="left center"
+        className="left"
         style={{ background: "red" }}
         onTouchStart={handleTouchStart}
         onTouchEnd={(e) => handleTouchEnd(e, true)}
         onClick={() => setCountLeft((prevState) => prevState + 1)}
       >
-        <div className="content">
-          <p>Team 1</p>
+        <p className="nickname">Team 1</p>
+        <div className="content center">
           <p>{countLeft}</p>
         </div>
       </div>
       <div
-        className="reset-btn center"
+        className="reset-btn svg-btn center"
         onClick={() => {
           setCountLeft(0);
           setCountRight(0);
@@ -66,14 +67,19 @@ const Scoreboard = () => {
         <img src={ResetIcon} alt={"reset.svg"} />
       </div>
       <div
-        className="right center"
+        className="cloud-btn svg-btn center"
+      >
+        <img src={CloudSave} alt={"cloud-upload.svg"} />
+      </div>
+      <div
+        className="right"
         style={{ background: "blue" }}
         onTouchStart={handleTouchStart}
         onTouchEnd={(e) => handleTouchEnd(e, false)}
         onClick={() => setCountRight((prevState) => prevState + 1)}
       >
-        <div className="content">
-          <p>Team 2</p>
+        <p className="nickname">Team 2</p>
+        <div className="content center">
           <p>{countRight}</p>
         </div>
       </div>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.2" baseProfile="tiny" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;"
+	xmlns:graph="&ns_graphs;"
+	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	width="256px" height="256px"
+	viewBox="0 0 256 256" xml:space="preserve">
+<switch>
+	<g i:extraneous="self">
+		<g id="Background" display="none">
+			<rect display="inline" fill="#FFFFFF" width="256" height="256"/>
+		</g>
+		<g id="Color_version">
+			<g id="_x30_01_to_100">
+				<g id="cloud_upload">
+					<g>
+						<g>
+							<path fill="none" stroke="black" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+							M143,166h60.009C218.262,159,229,143.266,229,125.74c0-23.195-18.804-42.464-42-42.464l-2.785-0.002
+							c-8.526-24.693-31.958-41.88-59.548-41.88C93.973,41.395,68.419,64,62.82,93c-0.002,0-0.004,0-0.007,0
+							C42.872,94,27,110.877,27,131.059C27,146.482,36.274,160,49.547,166H123"/>
+						</g>
+					</g>
+					<g>
+						<line fill="none" stroke="black" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="132" y1="216" x2="132" y2="120"/>
+						<polyline fill="none" stroke="black" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+						105.625,144.42 132.375,118 132.625,118 159.375,144.585"/>
+					</g>
+				</g>
+				
+			</g>
+		</g>
+	</g>
+</switch>
+</svg>
