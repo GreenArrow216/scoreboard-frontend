@@ -1,9 +1,8 @@
 import { TouchEvent, useState } from "react";
 import "../App.css";
 
-import Reset from "../assets/reset.svg";
-import Settings from "../assets/settings.svg";
-import Modal from "./modal/modal";
+import ResetIcon from "../assets/reset.svg";
+import Settings from "./settings";
 
 const Scoreboard = () => {
   const [countLeft, setCountLeft] = useState<number>(0);
@@ -44,15 +43,7 @@ const Scoreboard = () => {
   };
   return (
     <div className="container center">
-      <div className="settings-btn">
-        <img src={Settings} alt={"settings.svg"} />
-      </div>
-      <Modal title={"Change Settings"} isOpen={true}>
-        <input/>
-        <input/>
-        <input/>
-        <input/>
-      </Modal>
+      <Settings/>
       <div
         className="left center"
         style={{ background: "red" }}
@@ -72,7 +63,7 @@ const Scoreboard = () => {
           setCountRight(0);
         }}
       >
-        <img src={Reset} alt={"reset.svg"} />
+        <img src={ResetIcon} alt={"reset.svg"} />
       </div>
       <div
         className="right center"

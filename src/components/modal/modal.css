@@ -1,25 +1,55 @@
 .modal {
-    position: absolute;
+    position: fixed; /* Ensure the modal covers the viewport */
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
     visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .modal.open {
-    background-color: rgb(0,0,0,0.2);
-    visibility: visible;
+    opacity: 1; 
+    visibility: visible; 
 }
 
-.modal .modal-content {
+.modal.close {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    color: black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(0.9); 
+    transition: transform 0.3s ease; 
+    min-width: 450px;
+}
+
+.modal.open > .modal-content {
+    transform: scale(1); 
+}
+
+.modal.close > .modal-content {
+    transform: scale(0.9); 
+}
+
+/* .modal .modal-content {
     background-color: white;
     color: black;
     padding: 20px;
     border-radius: 10px;
-}
+    min-width: 450px;
+} */
 
 .modal .modal-header {
     display: flex;
