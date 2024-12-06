@@ -1,4 +1,4 @@
-import Scoreboard from "./components/scoreboard";
+import Scoreboard from "./pages/scoreboard";
 
 function App() {
   return (

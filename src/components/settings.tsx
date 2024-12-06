@@ -1,36 +1,19 @@
 import Modal from "./modal/modal";
 
 import SettingsIcon from "../assets/settings.svg";
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useState } from "react";
 import { MATCH_DETAILS, MatchDetails } from "../constants";
-import { fetchPlayerData } from "../API/queries";
-
-type PlayerTypes = {
-  id: number;
-  name: string;
-};
+import { PlayerTypes } from "../pages/scoreboard";
 
 type SettingsProps = {
   onSubmit: (arg: MatchDetails) => void;
+  playerData: PlayerTypes[]
 };
 
 const Settings = (props: SettingsProps) => {
-  const [playerData, setPlayerData] = useState<PlayerTypes[]>([]);
+  const {playerData} = props
   const [isModalOpen, setModalOpen] = useState<boolean>(false);
   const [formValues, setFormValues] = useState<MatchDetails>(MATCH_DETAILS);
-
-  useEffect(() => {
-    const fetchDataAndSetState = async () => {
-      if (isModalOpen && playerData?.length === 0) {
-        const data = await fetchPlayerData();
-        if (data) {
-          setPlayerData(data);
-        }
-      }
-    };
-    fetchDataAndSetState();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isModalOpen]);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>

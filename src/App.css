@@ -4,9 +4,15 @@
   height: 100vh;
 }
 
-h1,h2,h3,h4,h5,h6,p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 .center {
@@ -43,6 +49,10 @@ h1,h2,h3,h4,h5,h6,p {
   user-select: none;
 }
 
+.cloud-btn.disabled {
+  background-color: rgb(228, 38, 38);
+}
+
 .cloud-btn img {
   height: 25px;
   width: 25px;
@@ -65,6 +75,14 @@ h1,h2,h3,h4,h5,h6,p {
   margin-top: 15px;
 }
 
+.left {
+  background-color: green;
+}
+
+.right {
+  background-color: blue;
+}
+
 .left,
 .right {
   height: 100%;
@@ -80,6 +98,10 @@ h1,h2,h3,h4,h5,h6,p {
   font-weight: bolder;
   top: 80px;
   width: 100%;
+}
+
+.nickname .helper-text {
+  font-size: 14px;
 }
 
 .content {
@@ -98,15 +120,16 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 .btn:hover {
-  background-color: #05b3f22a;;
-transition: all 0.3s;
+  background-color: #05b3f22a;
+  transition: all 0.3s;
 }
 
 form .form-control {
   text-align: left;
   margin-bottom: 12px;
   display: flex;
-  select, input {
+  select,
+  input {
     padding: 10px;
     flex-basis: 50%;
   }
@@ -116,4 +139,32 @@ form .form-control {
     margin-bottom: 4px;
     flex-shrink: 0;
   }
+}
+
+#my-canvas {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 2;
+}
+
+.score-table-container {
+  padding: 30px
+}
+
+.score-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.score-table-container h3 {
+  margin: 20px 0 30px 0;
+}
+
+.score-table td,
+.score-table th {
+  padding: 8px;
+  border: 1px solid white;
 }
