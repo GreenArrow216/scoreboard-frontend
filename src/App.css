@@ -124,7 +124,7 @@ p {
   transition: all 0.3s;
 }
 
-form .form-control {
+.form-control {
   text-align: left;
   margin-bottom: 12px;
   display: flex;

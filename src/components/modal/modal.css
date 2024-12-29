@@ -32,7 +32,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transform: scale(0.9); 
     transition: transform 0.3s ease; 
-    min-width: 450px;
+    min-width: 320px;
 }
 
 .modal.open > .modal-content {

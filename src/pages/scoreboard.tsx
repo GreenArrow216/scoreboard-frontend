@@ -69,7 +69,14 @@ const Scoreboard = () => {
         datePlayed: new Date().toISOString(),
         winnerId: winnerId,
         winnerName: findPlayerName(winnerId),
-        wonAgainst: findPlayerName(matchDetails.player1 === winnerId ? matchDetails.player2 : matchDetails.player1)
+        wonAgainst: findPlayerName(
+          matchDetails.player1 === winnerId
+            ? matchDetails.player2
+            : matchDetails.player1
+        ),
+      }).then(() => {
+        setCountLeft(0);
+        setCountRight(0);
       });
     }
   };
