@@ -1,6 +1,7 @@
 import { formatDate } from "../helper";
 import useGetData from "../hooks/useGetData";
 import '../App.css'
+import { MatchesAPI } from "../API/queries";
 
 type MatchesType = {
   id: number;
@@ -11,9 +12,9 @@ type MatchesType = {
 };
 
 const ScoreTable = () => {
-  const { data } = useGetData("http://localhost:3000/matches");
+  const { data } = useGetData(MatchesAPI);
   const matches: MatchesType[] = data ?? [];
-  console.log({matches})
+
   return (
     <div className="score-table-container">
       <h3>Matches Played</h3>

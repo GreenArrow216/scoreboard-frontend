@@ -1,12 +1,5 @@
-export const fetchPlayerData = async () => {
-    try {
-      const response = await fetch('http://localhost:3000/players');
-      if (!response.ok) {
-        throw new Error('Failed to fetch players');
-      }
-      return await response.json();
-    } catch (error) {
-      console.error('Error fetching player data:', error);
-      return null; // Return null or an empty array to handle errors gracefully
-    }
-  };
+const API_BASE_URL =
+  "https://scoreboard-nodejs-production.up.railway.app"
+
+export const MatchesAPI = `${API_BASE_URL}/matches`;
+export const PlayersAPI = `${API_BASE_URL}/players`;

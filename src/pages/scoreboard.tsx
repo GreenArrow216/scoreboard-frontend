@@ -8,6 +8,7 @@ import { MATCH_DETAILS, MatchDetails } from "../constants";
 import { throwConfetti } from "../helper";
 import useMutateData from "../hooks/useMutateData";
 import useGetData from "../hooks/useGetData";
+import { MatchesAPI, PlayersAPI } from "../API/queries";
 
 export type PlayerTypes = {
   id: number;
@@ -27,7 +28,7 @@ const Scoreboard = () => {
       ? matchDetails.player2
       : undefined;
 
-  const { data } = useGetData("http://localhost:3000/players");
+  const { data } = useGetData(PlayersAPI);
   const playerData: PlayerTypes[] = data ?? [];
   const { mutateData } = useMutateData();
 
@@ -64,7 +65,7 @@ const Scoreboard = () => {
 
   const saveMatchDetails = () => {
     if (winnerId) {
-      mutateData("http://localhost:3000/matches", "POST", {
+      mutateData(MatchesAPI, "POST", {
         datePlayed: new Date().toISOString(),
         winnerId: winnerId,
         winnerName: findPlayerName(winnerId),
